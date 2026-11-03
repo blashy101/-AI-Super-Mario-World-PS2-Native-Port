@@ -1,0 +1,21 @@
+BOOT_RESULT case=1 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=1 polls=2 icons=1 reuse=0 late=0 steps=357 save=mc0:/SMWPS2/smw.srm overlay=0,0,0,0
+BOOT_RESULT case=2 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=1 polls=121 icons=0 reuse=0 late=1 steps=239 save= overlay=0,0,0,0
+BOOT_RESULT case=3 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=1 polls=1 icons=0 reuse=0 late=0 steps=359 save= overlay=0,0,0,0
+BOOT_RESULT case=4 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=2 polls=2 icons=0 reuse=0 late=0 steps=357 save= overlay=0,0,0,0
+BOOT_RESULT case=5 status=1 reset=1 sync=30 rpc=1 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=0 save= overlay=0,0,0,0
+BOOT_RESULT case=6 status=0 reset=1 sync=1 rpc=2 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=359 save= overlay=0,0,0,0
+BOOT_RESULT case=7 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=0 polls=0 icons=0 reuse=0 late=0 steps=338 save= overlay=0,10,5,0
+BOOT_RESULT case=8 status=1 reset=30 sync=0 rpc=1 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=0 save= overlay=0,0,0,0
+BOOT_RESULT case=10 status=0 reset=1 sync=1 rpc=2 legacy=0 init=1 probes=1 polls=2 icons=1 reuse=6 late=0 steps=357 save=mc0:/SMWPS2/smw.srm overlay=0,0,0,0
+BOOT_RESULT case=11 status=0 reset=1 sync=1 rpc=2 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=320 save= overlay=0,0,0,0
+HANDOFF_RESULT case=11 aspects=NWNW uploads=7 game_inputs=292 dropped_inputs=3 game_4_3=21 game_16_9=139 storage_modules=0
+BOOT_RESULT case=12 status=0 reset=1 sync=1 rpc=2 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=349 save= overlay=0,0,0,0
+HANDOFF_RESULT case=12 aspects= uploads=0 game_inputs=340 dropped_inputs=0 game_4_3=0 game_16_9=0 storage_modules=0
+BOOT_RESULT case=13 status=0 reset=2 sync=2 rpc=3 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=187 save= overlay=0,0,0,0
+HANDOFF_RESULT case=13 aspects= uploads=0 game_inputs=180 dropped_inputs=0 game_4_3=0 game_16_9=0 storage_modules=0
+IDLE_RESULT case=13 idle_fields=520 gfx_submissions=1 game_inputs=180
+BOOT_RESULT case=14 status=0 reset=1 sync=1 rpc=2 legacy=0 init=0 probes=0 polls=0 icons=0 reuse=0 late=0 steps=187 save= overlay=0,0,0,0
+HANDOFF_RESULT case=14 aspects= uploads=0 game_inputs=180 dropped_inputs=0 game_4_3=0 game_16_9=0 storage_modules=0
+IDLE_RESULT case=14 idle_fields=520 gfx_submissions=1 game_inputs=180
+BOOT_RESULT case=9 status=0 reset=0 sync=0 rpc=1 legacy=4 init=1 probes=0 polls=0 icons=0 reuse=0 late=0 steps=359 save=smw.srm overlay=0,0,0,0
+PASS: normal/unformatted/stuck/failed card RPC; delayed callback memory lifetime; reset deadlines; missing card module; OPL-like resident reuse; host: build; overlay initially hidden, L2+R2 toggle and launcher return, MX4SIO launch without save probes, repeated aspect switches and input handoff, OPL Mode 3 and Apps launches after 8.7 seconds idle

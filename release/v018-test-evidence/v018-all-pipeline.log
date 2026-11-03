@@ -1,0 +1,17 @@
+usa: clean ROM validated
+japanese: clean ROM validated
+super_system: clean ROM validated
+Running: python3 /tmp/smwps2-build-nb4n4srx/project/tools/prepare_assets.py /tmp/smwps2-build-nb4n4srx/roms/usa.sfc
+Created /tmp/smwps2-build-nb4n4srx/project/data/smw_assets.dat (355868 bytes)
+Running: python3 /tmp/smwps2-build-nb4n4srx/project/tools/prepare_japanese.py /tmp/smwps2-build-nb4n4srx/roms/japanese.sfc
+Created /tmp/smwps2-build-nb4n4srx/project/data/smw_japanese.dat (126408 bytes, SHA256 7ec286e4fa9cd89f812e0547c172b9ffaef5090174f73cabe9fe19cefbde58e4)
+Running: python3 /tmp/smwps2-build-nb4n4srx/project/tools/prepare_super_system.py /tmp/smwps2-build-nb4n4srx/roms/super_system.sfc
+Created /tmp/smwps2-build-nb4n4srx/project/data/smw_super_system.dat (12812 bytes, SHA256 e054deb88e98590ab705b506850a12ddb385ec7ce58553be062dea0a4aa0262a)
+Prepared native engine with locally extracted assets; no compiler or Docker is used.
+Running: python3 /tmp/smwps2-build-nb4n4srx/project/tools/check_elf.py /tmp/smwps2-build-nb4n4srx/project/dist/SMWPS2.elf
+PASS: R5900 ELF, entry 0x001014c0, native game/audio symbols, no CPU interpreter symbols
+Bytes: 1840472; SHA256: ecc63660c604ba02230b34e90f7f1a57999f6b4e31829899dfcfdca4f34921e9
+Running: python3 /tmp/smwps2-build-nb4n4srx/project/tools/make_iso.py --elf
+Created and verified: /tmp/smwps2-build-nb4n4srx/project/dist/SMWPS2_v018.iso (18671616 bytes)
+ELF SHA256: ecc63660c604ba02230b34e90f7f1a57999f6b4e31829899dfcfdca4f34921e9
+Build complete: /workspace/scratch/506fdc6232ca/smw-ps2-v018/build/portable output/SMWPS2_v018.iso

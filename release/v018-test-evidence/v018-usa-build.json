@@ -1,0 +1,30 @@
+{
+  "version": "v018",
+  "kit_version": "v018",
+  "backend": "portable",
+  "built_utc": "2026-11-02T21:55:18.500414+00:00",
+  "inputs": {
+    "usa": {
+      "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765",
+      "copier_header_removed": true
+    }
+  },
+  "source_sha256": "4b6e5a1f544cc770090d706da4cd9b65e92604c6ea7a4f1769e9c675f7874089",
+  "features": [
+    "usa"
+  ],
+  "files": {
+    "SMWPS2_v018.elf": {
+      "bytes": 1840472,
+      "sha256": "1e35fc537f7f477276fd6a7c7a30a09109d8ad8558b3ee128d293b7b305abb98"
+    },
+    "SMWPS2_v018.iso": {
+      "bytes": 18671616,
+      "sha256": "e6601b824a927082bf2e92f38e2cefcd26a82f492a412f1b36431a3905059b40"
+    }
+  },
+  "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+  "scope": "Local asset extraction, precompiled zero-asset engine filling and verified ISO packaging; no client source compilation.",
+  "engine_sha256": "99b6ff81d38280e7f1750e356fe86b228b4db2a6a66abea67a47bd67cdaf2526",
+  "native_source_sha256": "5ad74a149df743a45a87765e12acb10dfffe6212a56cc05e21ed194bc6365fd4"
+}

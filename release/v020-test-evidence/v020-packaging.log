@@ -1,0 +1,24 @@
+PASS: R5900 ELF, entry 0x001014c0, native game/audio symbols, no CPU interpreter symbols
+Bytes: 1841928; SHA256: f118c3e0596d858c341616561532e63d7ff2ed71a2dc6da7485fd9587652a343
+Created and verified: /workspace/scratch/506fdc6232ca/smw-ps2-v020/dist/SMWPS2_v020.iso (18673664 bytes)
+ELF SHA256: f118c3e0596d858c341616561532e63d7ff2ed71a2dc6da7485fd9587652a343
+PASS: all portable ELF, ISO boot readback and Apps archive
+PASS: R5900 ELF, entry 0x001014c0, native game/audio symbols, no CPU interpreter symbols
+Bytes: 1841928; SHA256: 9805f94be35db8ac5b5e98b69c015e58e12d3f74aed57ab4594e7a795df2a143
+Created and verified: /workspace/scratch/506fdc6232ca/smw-ps2-v020/build/usa-only/SMWPS2_v020.iso (18673664 bytes)
+ELF SHA256: 9805f94be35db8ac5b5e98b69c015e58e12d3f74aed57ab4594e7a795df2a143
+PASS: usa portable ELF, ISO boot readback and Apps archive
+PASS: real zero-asset engine, exact slot boundaries, unchanged code outside slots, optional clearing, size checks, source mismatch and corrupt-template rejection
+PASS: malformed ROM rejected, code staging excludes all DAT/ROM files, mount paths quoted, actual frontend runs with both optional weak packs absent
+usa: clean ROM validated
+Running: docker info --format
+contract-test-server
+Running: docker build --tag
+context has Dockerfile only
+Running: docker run --rm
+read-only source and ROM mounts; separate writable output
+Build complete: /tmp/tmpfjkmpbis/output with, comma/SMWPS2_v020.iso
+OPL Apps package: /tmp/tmpfjkmpbis/output with, comma/SMWPS2_v020_MX4SIO_Apps.zip
+PASS: Docker command contract, isolated image context, read-only mounts and output paths with spaces/commas (mocked; not a container run)
+PASS: .ic1 picker, named program prompt, companion-file explanation and dialog retry (dialog API mocked)
+PASS: extracted kit packaging without installed dependencies

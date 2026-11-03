@@ -1,0 +1,11 @@
+usa: clean ROM validated
+Running: python3 /tmp/smwps2-build-dh0a4yjs/project/tools/prepare_assets.py /tmp/smwps2-build-dh0a4yjs/roms/usa.sfc
+Created /tmp/smwps2-build-dh0a4yjs/project/data/smw_assets.dat (355868 bytes)
+Prepared native engine with locally extracted assets; no compiler or Docker is used.
+Running: python3 /tmp/smwps2-build-dh0a4yjs/project/tools/check_elf.py /tmp/smwps2-build-dh0a4yjs/project/dist/SMWPS2.elf
+PASS: R5900 ELF, entry 0x001014c0, native game/audio symbols, no CPU interpreter symbols
+Bytes: 1840472; SHA256: 1e35fc537f7f477276fd6a7c7a30a09109d8ad8558b3ee128d293b7b305abb98
+Running: python3 /tmp/smwps2-build-dh0a4yjs/project/tools/make_iso.py --elf
+Created and verified: /tmp/smwps2-build-dh0a4yjs/project/dist/SMWPS2_v018.iso (18671616 bytes)
+ELF SHA256: 1e35fc537f7f477276fd6a7c7a30a09109d8ad8558b3ee128d293b7b305abb98
+Build complete: /workspace/scratch/506fdc6232ca/smw-ps2-v018/build/packaged output with spaces/SMWPS2_v018.iso

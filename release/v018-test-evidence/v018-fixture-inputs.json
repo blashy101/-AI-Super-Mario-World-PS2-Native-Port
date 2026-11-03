@@ -1,0 +1,24 @@
+{
+  "SMWDisX_commit": "30643c7595a7d097d731de69476f8059c7cf98c3",
+  "asar_commit": "5fd539cd510e4a26afef66fc14e35ca6d8ff0497",
+  "inputs": [
+    {
+      "edition": "usa",
+      "bytes": 524288,
+      "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765",
+      "scope": "Assembled SMWDisX fixture; not independently supplied dump"
+    },
+    {
+      "edition": "japanese",
+      "bytes": 524288,
+      "sha1": "f977afabf24ed269d86366209a460450bbc37e76",
+      "scope": "Assembled SMWDisX fixture; not independently supplied dump"
+    },
+    {
+      "edition": "super_system",
+      "bytes": 524288,
+      "sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+      "scope": "Assembled SMWDisX fixture; not independently supplied dump"
+    }
+  ]
+}

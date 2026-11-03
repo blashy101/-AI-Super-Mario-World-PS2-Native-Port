@@ -1,0 +1,13 @@
+PASS: malformed ROM rejected, code staging excludes all DAT/ROM files, mount paths quoted, actual frontend runs with both optional weak packs absent
+usa: clean ROM validated
+Running: docker info --format
+contract-test-server
+Running: docker build --tag
+context has Dockerfile only
+Running: docker run --rm
+read-only source and ROM mounts; separate writable output
+Build complete: /tmp/tmpwdty13f0/output with, comma/SMWPS2_v020.iso
+OPL Apps package: /tmp/tmpwdty13f0/output with, comma/SMWPS2_v020_MX4SIO_Apps.zip
+PASS: Docker command contract, isolated image context, read-only mounts and output paths with spaces/commas (mocked; not a container run)
+PASS: .ic1 picker, named program prompt, companion-file explanation and dialog retry (dialog API mocked)
+PASS: real zero-asset engine, exact slot boundaries, unchanged code outside slots, optional clearing, size checks, source mismatch and corrupt-template rejection

@@ -1,0 +1,1 @@
+PASS: real zero-asset engine, exact slot boundaries, unchanged code outside slots, optional clearing, size checks, source mismatch and corrupt-template rejection

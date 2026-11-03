@@ -1,0 +1,32 @@
+{
+  "version": "v018",
+  "status": "MX4SIO compatibility candidate; hardware acceptance pending",
+  "native_source_sha256": "5ad74a149df743a45a87765e12acb10dfffe6212a56cc05e21ed194bc6365fd4",
+  "empty_engine_sha256": "99b6ff81d38280e7f1750e356fe86b228b4db2a6a66abea67a47bd67cdaf2526",
+  "files": {
+    "SMWPS2_v018.elf": {
+      "bytes": 1840472,
+      "sha256": "ecc63660c604ba02230b34e90f7f1a57999f6b4e31829899dfcfdca4f34921e9"
+    },
+    "SMWPS2_v018.iso": {
+      "bytes": 18671616,
+      "sha256": "0257776e05fb57c6ea5582ac977bec9d8a4c0ca99bfb341be16e71a32c2fe1dc"
+    }
+  },
+  "tests": {
+    "boot_storage_sanitized_scenarios": 10,
+    "launcher": "EAJAE passed",
+    "platform_model": "8 current 30-minute cases passed; old negative control reproduced slowdown",
+    "builder": "ROM validation, picker, source staging, optional symbols and mocked Docker contracts passed",
+    "portable_engine": "slot boundaries, optional clearing, corruption/source mismatch and size rejection passed",
+    "real_pipeline": "all inputs then US-only passed in same folder with no pip packages, PS2 compiler on PATH or Docker",
+    "packaged_copy": "ZIP extracted into spaced path; actual automatic portable all-input and US-only builds passed; final ELF matched and optional slots cleared; engine/builder regression scripts passed"
+  },
+  "limits": [
+    "No actual v018 PS2, MX4SIO or PCSX2 runtime execution in this environment",
+    "ASan/UBSan checks use an SDK facade, not hardware emulation; LeakSanitizer disabled due restricted process inspection",
+    "Reset deadlines bound retry loops, not a loader hook or SDK call that never returns",
+    "ROM fixtures assembled from SMWDisX match all supported clean hashes; no independent dumps in this v018 run",
+    "Broad v016 campaign smoke results are retained historical evidence; not rerun as v018"
+  ]
+}
