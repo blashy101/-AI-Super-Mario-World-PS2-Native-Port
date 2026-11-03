@@ -1,0 +1,40 @@
+{
+  "version": "v017",
+  "kit_version": "v017.1",
+  "backend": "portable",
+  "built_utc": "2026-11-02T16:11:17.119809+00:00",
+  "inputs": {
+    "usa": {
+      "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765",
+      "copier_header_removed": true
+    },
+    "japanese": {
+      "sha1": "f977afabf24ed269d86366209a460450bbc37e76",
+      "copier_header_removed": false
+    },
+    "super_system": {
+      "sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+      "copier_header_removed": false
+    }
+  },
+  "source_sha256": "a12e13e59cfb57c07af8ef964adcce3c39dcc5d9bcd5cea135d9ba4c57b8a0a1",
+  "features": [
+    "usa",
+    "japanese",
+    "super_system"
+  ],
+  "files": {
+    "SMWPS2_v017.elf": {
+      "bytes": 1705220,
+      "sha256": "619b94f3be1d5ac317ad95a39200af0738719e5623dca589b9fb196dc1a2bc3f"
+    },
+    "SMWPS2_v017.iso": {
+      "bytes": 18536448,
+      "sha256": "a94a721766478b3748868677c2adce302033294366f6edb4bf8b1b31206bcf99"
+    }
+  },
+  "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+  "scope": "Local asset extraction, precompiled zero-asset engine filling and verified ISO packaging; no client source compilation.",
+  "engine_sha256": "c82169a8a02f0d58b3c8f65b3726370fcdfe9d7fb58d12ddf8f60b364195417e",
+  "native_source_sha256": "faf4fa14a3c0c378fec629f5df6f75365478a3d9ad582f0dc9f36e728dea01d9"
+}

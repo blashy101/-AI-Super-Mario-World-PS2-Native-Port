@@ -1,0 +1,46 @@
+{
+  "version": "v017",
+  "features": [
+    "usa",
+    "japanese",
+    "super_system"
+  ],
+  "source_sha256": "b5898d2f773b7ac6c0d29ef16ec21676e1f59cfbd1dfbd3da2d7355e81528bab",
+  "files": {
+    "SMWPS2_v017.elf": {
+      "bytes": 1705220,
+      "sha256": "619b94f3be1d5ac317ad95a39200af0738719e5623dca589b9fb196dc1a2bc3f"
+    },
+    "SMWPS2_v017.iso": {
+      "bytes": 18536448,
+      "sha256": "4d89a65cb7e2f779bc312585a0f1d2034d51d86a5c39a2a1acebae1f607728cf"
+    }
+  },
+  "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+  "native_changes": [
+    "src/menu.c artwork",
+    "src/ps2_main.c diagnostic version labels"
+  ],
+  "arcade_inputs": {
+    "nss-mw-0_prg.ic1": {
+      "accepted": true,
+      "sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+      "copier_header_removed": false
+    },
+    "nss-r__ic3__mw.ic3": {
+      "accepted": false,
+      "message": "This is the 32 KiB companion ROM, not the SMW game program. Select nss-mw-0_prg.ic1 (512 KiB) for Super System. The .ic3 companion ROM and security.prm are not needed by this port. Expected SHA1 06a6efc246c6fdb83efab1d402d61d2179a84494; got e116f01342fcf359498ed8750741c139093b1fb2."
+    },
+    "security.prm": {
+      "accepted": false,
+      "message": "This is the 16-byte security PROM, not the SMW game program. Select nss-mw-0_prg.ic1 (512 KiB) for Super System. The .ic3 companion ROM and security.prm are not needed by this port. Expected SHA1 06a6efc246c6fdb83efab1d402d61d2179a84494; got 6805cefb1856c3498b7a7a049c0d09858afac47c."
+    }
+  },
+  "sdk": {
+    "url": "https://github.com/ps2dev/ps2dev/releases/download/latest/ps2dev-ubuntu-latest.tar.gz",
+    "bytes": 274935164,
+    "sha256": "a49d9f066771402d7bf54d092efa77e8bc4bd0bdaf2292e4aa37642865ad172d"
+  },
+  "asset_source": "US/Japan DAT packs recovered unchanged from prior working v015 ELF; NSS DAT verified against supplied game program",
+  "scope": "Native cross-build and ISO byte readback; actual Windows/Docker and PS2/PCSX2 runtime not tested. Dialog/Docker APIs mocked in focused tests."
+}

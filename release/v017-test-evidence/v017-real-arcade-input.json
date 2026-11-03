@@ -1,0 +1,15 @@
+{
+  "nss-mw-0_prg.ic1": {
+    "accepted": true,
+    "sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+    "copier_header_removed": false
+  },
+  "nss-r__ic3__mw.ic3": {
+    "accepted": false,
+    "message": "This is the 32 KiB companion ROM, not the SMW game program. Select nss-mw-0_prg.ic1 (512 KiB) for Super System. The .ic3 companion ROM and security.prm are not needed by this port. Expected SHA1 06a6efc246c6fdb83efab1d402d61d2179a84494; got e116f01342fcf359498ed8750741c139093b1fb2."
+  },
+  "security.prm": {
+    "accepted": false,
+    "message": "This is the 16-byte security PROM, not the SMW game program. Select nss-mw-0_prg.ic1 (512 KiB) for Super System. The .ic3 companion ROM and security.prm are not needed by this port. Expected SHA1 06a6efc246c6fdb83efab1d402d61d2179a84494; got 6805cefb1856c3498b7a7a049c0d09858afac47c."
+  }
+}
