@@ -1,0 +1,25 @@
+{
+  "format": "SMWPS2-ENGINE-1",
+  "version": "v022",
+  "engine_sha256": "94f106366d0dd9b0050f784627032dbd80f7409d7925348c71a2706b2094ec54",
+  "native_source_sha256": "9e9e0795435060dab58bd13851da1ba8ecc79278271df1d74bfa85448446d656",
+  "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+  "slots": {
+    "usa": {
+      "offset": 1053328,
+      "capacity": 355868,
+      "size_offset": 1409196
+    },
+    "japanese": {
+      "offset": 1409200,
+      "capacity": 126408,
+      "size_offset": 1535608
+    },
+    "super_system": {
+      "offset": 1535616,
+      "capacity": 12812,
+      "size_offset": 1548428
+    }
+  },
+  "scope": "Compiled native code, audsrv/SDK modules and zero-filled asset slots. No ROM or extracted DAT pack."
+}
