@@ -1,0 +1,6 @@
+HOST ONLY: frames=1800 seconds=3.410 fps=527.90 mode=7 modes=0xfe level_frames=0 action_frames=0 audio_frames=1650 image_hash=a50b0fac ram_hash=b635b3f6
+HOST ONLY: frames=7200 seconds=9.809 fps=734.05 mode=7 modes=0xfffdfe level_frames=1849 action_frames=1849 audio_frames=6467 image_hash=52ed46c0 ram_hash=072e932c
+HOST ONLY: frames=7200 seconds=6.905 fps=1042.67 mode=7 modes=0xfffdfe level_frames=1849 action_frames=1849 audio_frames=6467 image_hash=52ed46c0 ram_hash=072e932c
+HOST ONLY: frames=7200 seconds=5.670 fps=1269.93 mode=7 modes=0xfffdfe level_frames=1849 action_frames=1849 audio_frames=6467 image_hash=52ed46c0 ram_hash=072e932c
+HOST ONLY: frames=7200 seconds=5.649 fps=1274.49 mode=7 modes=0xfffdfe level_frames=1849 action_frames=1849 audio_frames=6467 image_hash=52ed46c0 ram_hash=072e932c
+PASS: native gameplay, audio, saves, alternate-frame presentation, embedded assets and every-frame v002 regression hashes

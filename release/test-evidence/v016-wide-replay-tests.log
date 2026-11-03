@@ -1,0 +1,5 @@
+PASS: title art is pixel-identical with clean 43-column pillarboxes
+HOST ONLY: frames=7200 seconds=6.330 fps=1137.49 mode=7 modes=0xfffdfe level_frames=1533 action_frames=1533 audio_frames=6490 image_hash=08fd2116 ram_hash=22ec8ee3
+HOST ONLY: frames=7200 seconds=6.287 fps=1145.27 mode=7 modes=0xfffdfe level_frames=1533 action_frames=1533 audio_frames=6490 image_hash=08fd2116 ram_hash=22ec8ee3
+HOST ONLY: frames=7200 seconds=5.453 fps=1320.40 mode=7 modes=0xfffdfe level_frames=1533 action_frames=1533 audio_frames=6490 image_hash=08fd2116 ram_hash=22ec8ee3
+PASS: deterministic wide gameplay; all 7200 RAM/PCM states match across render skipping

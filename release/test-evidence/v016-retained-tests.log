@@ -1,0 +1,261 @@
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -MMD -MP -c vendor/smw/src/smw_00.c -o build/host/vendor/smw/src/smw_00.o
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -MMD -MP -c vendor/smw/src/smw_01.c -o build/host/vendor/smw/src/smw_01.o
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -MMD -MP -c vendor/smw/src/smw_05.c -o build/host/vendor/smw/src/smw_05.o
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -MMD -MP -c vendor/smw/src/smw_0d.c -o build/host/vendor/smw/src/smw_0d.o
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -MMD -MP -c src/headless.c -o build/host/src/headless.o
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas src/menu.c src/menu_preview.c -o build/host/menu-preview
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_ppu.c tests/reference/ppu_reference.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c -Wl,--gc-sections -o build/host/test-ppu
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_ppu.c tests/reference/ppu_reference.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c -Wl,--gc-sections -o build/host/test-ppu-gs
+build/host/test-audio-pacer
+PASS: stereo 48 kHz rational resampling, fractional samples, queue bounds/order/errors, VBlank wrap and overrun accounting
+python3 tests/test_platform.py
+python3 tests/test_audsrv_volume.py
+PASS: PCM input gain endpoints, clamping, monotonicity and no over-unity mixing
+PASS: production IOP volume routing, both channels, mute and master levels
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -c tests/reference/ss_cpu.c -o build/host/ss-reference-cpu.o
+cc -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o build/host/src/headless.o -Wl,--gc-sections -lm -o build/host/smw-headless
+{"seconds": 180, "format": 32000, "first_fps": 37.662, "last_fps": 14.985, "sim_hz": 59.956, "wait_calls": 10792, "underflows": 0, "short_writes": 0, "max_gap_ms": 83.417, "version": "v003", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": -2000, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 2000, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": true, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": -2000, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 2000, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": true, "widescreen": true}
+PASS: old-loop collapse reproduced; new-loop 30-minute cadence, audio drift and timer fallback
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_widescreen.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-widescreen
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_WIDE_COMPARE tests/test_widescreen.c tests/test_wide_reference.c tests/reference/ppu_v006.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--wrap=ppu_runLine -Wl,--gc-sections -lm -o build/host/test-wide-reference
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_WIDE_COMPARE -DSMW_PS2_PIXEL_FORMAT tests/test_widescreen.c tests/test_wide_reference.c tests/reference/ppu_v006.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--wrap=ppu_runLine -Wl,--gc-sections -lm -o build/host/test-wide-reference-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_transitions.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-transitions
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_transitions.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-transitions-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_v010.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-v010
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_v010.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-v010-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_overworld.c tests/reference/ppu_v010.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--wrap=ppu_runLine -Wl,--gc-sections -lm -o build/host/test-overworld
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_overworld.c tests/reference/ppu_v010.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--wrap=ppu_runLine -Wl,--gc-sections -lm -o build/host/test-overworld-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_wide_polish.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-polish
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_wide_polish.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-polish-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_super_system.c tests/ss_reference.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o build/host/ss-reference-cpu.o -Wl,--gc-sections -lm -o build/host/test-arcade
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_super_system.c tests/ss_reference.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o build/host/ss-reference-cpu.o -Wl,--gc-sections -lm -o build/host/test-arcade-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_v014_reports.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-v014
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_v014_reports.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-v014-gs
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_yoshi_wide.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/vendor/smw/src/snes/ppu.o build/host/vendor/smw/src/snes/ppu_old.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-yoshi
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -DSMW_PS2_PIXEL_FORMAT tests/test_yoshi_wide.c vendor/smw/src/snes/ppu.c vendor/smw/src/snes/ppu_old.c build/host/vendor/smw/src/lm.o build/host/vendor/smw/src/smw_00.o build/host/vendor/smw/src/smw_01.o build/host/vendor/smw/src/smw_02.o build/host/vendor/smw/src/smw_03.o build/host/vendor/smw/src/smw_04.o build/host/vendor/smw/src/smw_05.o build/host/vendor/smw/src/smw_07.o build/host/vendor/smw/src/smw_0c.o build/host/vendor/smw/src/smw_0d.o build/host/vendor/smw/src/smw_rtl.o build/host/vendor/smw/src/smw_spc_player.o build/host/vendor/smw/src/snes/dma.o build/host/vendor/smw/src/snes/dsp.o build/host/src/runtime.o build/host/src/runtime_helpers.o build/host/src/asset_index.o build/host/src/bus.o build/host/src/save_journal.o build/host/src/audio_queue.o build/host/src/widescreen.o build/host/src/localization.o build/host/src/super_system.o build/host/src/save_icon.o -Wl,--gc-sections -lm -o build/host/test-yoshi-gs
+python3 tests/test_assets.py
+PASS: seven malformed/legacy asset cases rejected; all four complete secondary tables match USA data
+build/host/test-ppu
+build/host/test-widescreen data/smw_assets.dat build/host/wide-fixtures
+PASS: 240 reference raster fixtures, including backdrop blends, sprite limits/rotation/interlace/OAM writes, flips, clipping, mosaic, palette writes and Mode 7
+build/host/test-ppu-gs
+build/host/test-wide-reference data/smw_assets.dat
+PASS: every native-area background pixel, priority and colour-math result preserved
+PASS: sprite x=-35, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+PASS: sprite x=270, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=0, 1 signed pieces, 92 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=200, 1 signed pieces, 0 visible pixels, no wrapped alias
+PASS: sprite x=400, camera=200, 0 signed pieces, 0 visible pixels, no wrapped alias
+PASS: expanded-frontier placement activates once and cannot duplicate its active slot
+PASS: original pipe motion in all four directions, with widescreen on and off
+PASS: side-tile cache collisions, invalid coordinates and per-draw mutations
+BANZAI stationary camera: record=1 x=496, 1 loads in 720 updates
+PASS: Banzai Bill leaves the view without repeatedly respawning at its visible trigger
+PASS: native frontier cannot reload a consumed placement still in the wider view
+PASS: leaving the activation region rearms a cleared native placement on return
+PASS: full pool defers activation; a transformed/consumed record cannot duplicate
+PASS: a scene exit/re-entry resets activation state even with the same sprite list
+PASS: a retained native one-shot/death flag remains consumed after leaving and returning
+PASS: a full ordinary pool does not starve the later reserved Banzai slot
+PASS: retail platform/Eerie groups defer with zero slots and activate their factory once
+PASS: visible scene effects and scroll commands wait for their native activation frontier
+PASS: 96 boundary cases across all three native offscreen banks; fall/keep-alive rules retained
+LEVEL 105 mode=0 layout=0 tileset=7 screens=20 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 106 mode=0 layout=0 tileset=0 screens=20 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 102 mode=0 layout=128 tileset=8 screens=11 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 103 mode=0 layout=0 tileset=0 screens=21 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 109 mode=10 layout=1 tileset=3 screens=1 wide=1
+PASS: 2816 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10a mode=0 layout=0 tileset=3 screens=32 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10b mode=0 layout=0 tileset=3 screens=15 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11a mode=0 layout=0 tileset=3 screens=27 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11b mode=0 layout=0 tileset=4 screens=3 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 013 mode=0 layout=0 tileset=5 screens=6 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 014 mode=0 layout=0 tileset=4 screens=3 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 101 mode=0 layout=0 tileset=1 screens=8 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 009 mode=2 layout=128 tileset=3 screens=12 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 00e mode=1 layout=0 tileset=1 screens=6 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1ce mode=8 layout=131 tileset=1 screens=1 wide=1
+PASS: 5632 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10e mode=17 layout=0 tileset=1 screens=8 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 095 mode=9 layout=0 tileset=255 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 096 mode=11 layout=0 tileset=255 screens=1 wide=0
+PASS: 240 reference raster fixtures, including backdrop blends, sprite limits/rotation/interlace/OAM writes, flips, clipping, mosaic, palette writes and Mode 7
+build/host/test-wide-reference-gs data/smw_assets.dat
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1c7 mode=16 layout=0 tileset=254 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: HUD reserve icon/drop alignment, 200 mode changes and framebuffer guards
+PASS: native widescreen integration; PS2/PCSX2 execution still required
+build/host/test-transitions data/smw_assets.dat
+build/host/test-transitions-gs data/smw_assets.dat
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 4:3/full draws, alive at 093f,0160
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 4:3/alternate draws, alive at 093f,0160
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 16:9/full draws, alive at 093f,0160
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 4:3/full draws, alive at 093f,0160
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 16:9/alternate draws, alive at 093f,0160
+PASS: narrow Mode-1 rooms and outgoing iris/fades retain projection; map projection and title/Mode-7 fallback stay separate
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 4:3/alternate draws, alive at 093f,0160
+PASS: 10342080 wide mosaic pixels, sizes 2..16, all Mode-1 backgrounds and three viewport offsets
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 16:9/full draws, alive at 093f,0160
+PASS: YI1 -> 1CB -> YI1 secondary 1CB, 16:9/alternate draws, alive at 093f,0160
+PASS: narrow Mode-1 rooms and outgoing iris/fades retain projection; map projection and title/Mode-7 fallback stay separate
+PASS: 10342080 wide mosaic pixels, sizes 2..16, all Mode-1 backgrounds and three viewport offsets
+PASS: first visible level fade is wide (30 incoming frames); map scene remains stable
+PASS: 4 full native pipe round trips and 651 wide fade/gameplay draws
+build/host/test-v010 data/smw_assets.dat data/smw_japanese.dat build/host/v010-fixtures
+PASS: every native-area background pixel, priority and colour-math result preserved
+PASS: sprite x=-35, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+PASS: sprite x=270, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=0, 1 signed pieces, 92 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=200, 1 signed pieces, 0 visible pixels, no wrapped alias
+PASS: sprite x=400, camera=200, 0 signed pieces, 0 visible pixels, no wrapped alias
+PASS: expanded-frontier placement activates once and cannot duplicate its active slot
+PASS: original pipe motion in all four directions, with widescreen on and off
+PASS: side-tile cache collisions, invalid coordinates and per-draw mutations
+BANZAI stationary camera: record=1 x=496, 1 loads in 720 updates
+PASS: Banzai Bill leaves the view without repeatedly respawning at its visible trigger
+PASS: native frontier cannot reload a consumed placement still in the wider view
+PASS: leaving the activation region rearms a cleared native placement on return
+PASS: full pool defers activation; a transformed/consumed record cannot duplicate
+PASS: a scene exit/re-entry resets activation state even with the same sprite list
+PASS: a retained native one-shot/death flag remains consumed after leaving and returning
+PASS: a full ordinary pool does not starve the later reserved Banzai slot
+PASS: retail platform/Eerie groups defer with zero slots and activate their factory once
+PASS: visible scene effects and scroll commands wait for their native activation frontier
+PASS: 96 boundary cases across all three native offscreen banks; fall/keep-alive rules retained
+LEVEL 105 mode=0 layout=0 tileset=7 screens=20 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: every native-area background pixel, priority and colour-math result preserved
+PASS: sprite x=-35, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+LEVEL 106 mode=0 layout=0 tileset=0 screens=20 wide=1
+PASS: sprite x=270, camera=200, 1 signed pieces, 128 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=0, 1 signed pieces, 92 visible pixels, no wrapped alias
+PASS: sprite x=330, camera=200, 1 signed pieces, 0 visible pixels, no wrapped alias
+PASS: sprite x=400, camera=200, 0 signed pieces, 0 visible pixels, no wrapped alias
+PASS: expanded-frontier placement activates once and cannot duplicate its active slot
+PASS: original pipe motion in all four directions, with widescreen on and off
+PASS: side-tile cache collisions, invalid coordinates and per-draw mutations
+BANZAI stationary camera: record=1 x=496, 1 loads in 720 updates
+PASS: Banzai Bill leaves the view without repeatedly respawning at its visible trigger
+PASS: native frontier cannot reload a consumed placement still in the wider view
+PASS: leaving the activation region rearms a cleared native placement on return
+PASS: full pool defers activation; a transformed/consumed record cannot duplicate
+PASS: a scene exit/re-entry resets activation state even with the same sprite list
+PASS: a retained native one-shot/death flag remains consumed after leaving and returning
+PASS: a full ordinary pool does not starve the later reserved Banzai slot
+PASS: retail platform/Eerie groups defer with zero slots and activate their factory once
+PASS: visible scene effects and scroll commands wait for their native activation frontier
+PASS: 96 boundary cases across all three native offscreen banks; fall/keep-alive rules retained
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 105 mode=0 layout=0 tileset=7 screens=20 wide=1
+LEVEL 102 mode=0 layout=128 tileset=8 screens=11 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 106 mode=0 layout=0 tileset=0 screens=20 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 103 mode=0 layout=0 tileset=0 screens=21 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 102 mode=0 layout=128 tileset=8 screens=11 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 109 mode=10 layout=1 tileset=3 screens=1 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 103 mode=0 layout=0 tileset=0 screens=21 wide=1
+PASS: 2816 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10a mode=0 layout=0 tileset=3 screens=32 wide=1
+LEVEL 109 mode=10 layout=1 tileset=3 screens=1 wide=1
+PASS: 2816 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10a mode=0 layout=0 tileset=3 screens=32 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10b mode=0 layout=0 tileset=3 screens=15 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10b mode=0 layout=0 tileset=3 screens=15 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11a mode=0 layout=0 tileset=3 screens=27 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11a mode=0 layout=0 tileset=3 screens=27 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11b mode=0 layout=0 tileset=4 screens=3 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 11b mode=0 layout=0 tileset=4 screens=3 wide=1
+LEVEL 013 mode=0 layout=0 tileset=5 screens=6 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 014 mode=0 layout=0 tileset=4 screens=3 wide=1
+LEVEL 013 mode=0 layout=0 tileset=5 screens=6 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 101 mode=0 layout=0 tileset=1 screens=8 wide=1
+LEVEL 014 mode=0 layout=0 tileset=4 screens=3 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 009 mode=2 layout=128 tileset=3 screens=12 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 101 mode=0 layout=0 tileset=1 screens=8 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 00e mode=1 layout=0 tileset=1 screens=6 wide=1
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 009 mode=2 layout=128 tileset=3 screens=12 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1ce mode=8 layout=131 tileset=1 screens=1 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 00e mode=1 layout=0 tileset=1 screens=6 wide=1
+PASS: 5632 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10e mode=17 layout=0 tileset=1 screens=8 wide=1
+PASS: 7040 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1ce mode=8 layout=131 tileset=1 screens=1 wide=1
+PASS: 5632 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 10e mode=17 layout=0 tileset=1 screens=8 wide=1
+LEVEL 095 mode=9 layout=0 tileset=255 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 096 mode=11 layout=0 tileset=255 screens=1 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1c7 mode=16 layout=0 tileset=254 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: 3520 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 095 mode=9 layout=0 tileset=255 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 096 mode=11 layout=0 tileset=255 screens=1 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+LEVEL 1c7 mode=16 layout=0 tileset=254 screens=0 wide=0
+PASS: 0 Map16/VRAM tile descriptors across camera and 256px wrap positions
+PASS: first visible level fade is wide (30 incoming frames); map scene remains stable
+PASS: 4 full native pipe round trips and 651 wide fade/gameplay draws
+build/host/test-v010-gs data/smw_assets.dat data/smw_japanese.dat build/host/v010-fixtures-gs
+make: build/host/test-v010-gs: Permission denied
+make: *** [Makefile:79: test-v010-gs] Error 127
+make: *** Waiting for unfinished jobs....
+PASS: HUD reserve icon/drop alignment, 200 mode changes and framebuffer guards
+PASS: native widescreen integration; PS2/PCSX2 execution still required
+PASS: v006 raster comparison, 15321600 wide and 94273536 native pixels
+PASS: HUD reserve icon/drop alignment, 200 mode changes and framebuffer guards
+PASS: native widescreen integration; PS2/PCSX2 execution still required
+PASS: v006 raster comparison, 15321600 wide and 94273536 native pixels
+PASS: original Japanese messages (25), level-name streams (256), cursor append and seven castle narratives
+PASS: Japanese title-to-game replay with alternate draws; all seven map loaders in both languages and main-map camera bounds
+python3 tests/test_save_icon.py
+PASS: Browser title, 720 outward egg triangles, normals, animation and texture; existing journals untouched; repair/idempotence/error paths

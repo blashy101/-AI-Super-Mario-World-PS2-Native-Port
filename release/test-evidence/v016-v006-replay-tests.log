@@ -1,0 +1,2 @@
+HOST ONLY: frames=1800 seconds=1.587 fps=1134.47 mode=7 modes=0xfe level_frames=0 action_frames=0 audio_frames=1650 image_hash=1533f32a ram_hash=b635b3f6
+PASS: every-frame v006 wide title pixel, RAM and PCM goldens

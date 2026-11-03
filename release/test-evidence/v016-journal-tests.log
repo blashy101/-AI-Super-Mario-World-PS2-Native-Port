@@ -1,0 +1,1 @@
+PASS: save journal round trip, unchanged data, truncated write and CRC recovery

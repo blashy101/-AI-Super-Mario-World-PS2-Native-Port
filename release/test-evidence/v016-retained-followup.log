@@ -1,0 +1,120 @@
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas src/menu.c src/menu_preview.c -o build/host/menu-preview
+build/host/test-v010-gs data/smw_assets.dat data/smw_japanese.dat build/host/v010-fixtures-gs
+build/host/test-overworld data/smw_assets.dat data/smw_japanese.dat build/host/v011-fixtures
+build/host/test-overworld-gs data/smw_assets.dat data/smw_japanese.dat build/host/v011-fixtures-gs
+build/host/test-polish data/smw_assets.dat data/smw_japanese.dat build/host/v012-fixtures
+PASS: original Japanese messages (25), level-name streams (256), cursor append and seven castle narratives
+PASS: Japanese title-to-game replay with alternate draws; all seven map loaders in both languages and main-map camera bounds
+build/host/test-polish-gs data/smw_assets.dat data/smw_japanese.dat build/host/v012-fixtures-gs
+PASS: 18565120 native message-layer pixels; 946656 map mat pixels on whole glyph boundaries; both languages, open/close and seven maps
+build/host/test-arcade data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat tests/reference/ss_program.dat build/host/v013-fixtures
+PASS: 55157760 map pixels match v010 raster; 733824 portrait/lives pixels match native 4:3; both languages, seven maps, windows, math, mosaic, palette changes and OAM reuse
+build/host/test-arcade-gs data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat tests/reference/ss_program.dat build/host/v013-fixtures-gs
+PASS: 18565120 native message-layer pixels; 946656 map mat pixels on whole glyph boundaries; both languages, open/close and seven maps
+build/host/test-v014 data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat build/host/v014-fixtures
+PASS: 55157760 map pixels match v010 raster; 733824 portrait/lives pixels match native 4:3; both languages, seven maps, windows, math, mosaic, palette changes and OAM reuse
+build/host/test-v014-gs data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat build/host/v014-fixtures-gs
+PASS: 10999 native NSS routine cases match original 65816 instructions (seven zones, cursor, session buffer, message and cutscene timing)
+NSS zone 1: 4:3/1P full draws, map 1 at 104,120, level 029, final mode 14
+NSS zone 1: 16:9/2P full draws, map 1 at 104,120, level 029, final mode 14
+NSS zone 1: 16:9/2P alternate draws, map 1 at 104,120, level 029, final mode 14
+PASS: edition 0 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+NSS zone 2: 4:3/1P full draws, map 0 at 88,280, level 015, final mode 20
+NSS zone 2: 16:9/2P full draws, map 0 at 88,280, level 015, final mode 20
+NSS zone 2: 16:9/2P alternate draws, map 0 at 88,280, level 015, final mode 20
+NSS zone 3: 4:3/1P full draws, map 2 at 88,296, level 03e, final mode 13
+NSS zone 3: 16:9/2P full draws, map 2 at 88,296, level 03e, final mode 13
+NSS zone 3: 16:9/2P alternate draws, map 2 at 88,296, level 03e, final mode 13
+PASS: edition 0 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+NSS zone 4: 4:3/1P full draws, map 0 at 328,88, level 00f, final mode 20
+NSS zone 4: 16:9/2P full draws, map 0 at 328,88, level 00f, final mode 20
+NSS zone 4: 16:9/2P alternate draws, map 0 at 328,88, level 00f, final mode 20
+PASS: edition 0 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+NSS zone 5: 4:3/1P full draws, map 3 at 136,376, level 042, final mode 20
+NSS zone 5: 16:9/2P full draws, map 3 at 136,376, level 042, final mode 20
+NSS zone 5: 16:9/2P alternate draws, map 3 at 136,376, level 042, final mode 20
+PASS: 10999 native NSS routine cases match original 65816 instructions (seven zones, cursor, session buffer, message and cutscene timing)
+NSS zone 6: 4:3/1P full draws, map 0 at 392,360, level 022, final mode 20
+NSS zone 6: 16:9/2P full draws, map 0 at 392,360, level 022, final mode 20
+PASS: edition 0 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+NSS zone 6: 16:9/2P alternate draws, map 0 at 392,360, level 022, final mode 20
+NSS zone 1: 4:3/1P full draws, map 1 at 104,120, level 029, final mode 14
+NSS zone 7: 4:3/1P full draws, map 0 at 232,376, level 018, final mode 20
+NSS zone 7: 16:9/2P full draws, map 0 at 232,376, level 018, final mode 20
+NSS zone 7: 16:9/2P alternate draws, map 0 at 232,376, level 018, final mode 20
+PASS: 21 native NSS title/zone/player/map/gameplay sessions, all seven zones in 4:3/16:9, 1P/2P, deterministic RAM/PCM with alternate draws; 12787 draws / 2556 skips
+PASS: retail save sentinel unchanged by arcade, game-over returns to title, language/edition reinitialization and asset validation
+build/host/test-yoshi data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat build/host/v015-fixtures
+NSS zone 1: 16:9/2P full draws, map 1 at 104,120, level 029, final mode 14
+PASS: edition 0 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+NSS zone 1: 16:9/2P alternate draws, map 1 at 104,120, level 029, final mode 14
+NSS zone 2: 4:3/1P full draws, map 0 at 88,280, level 015, final mode 20
+PASS: edition 0 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+NSS zone 2: 16:9/2P full draws, map 0 at 88,280, level 015, final mode 20
+NSS zone 2: 16:9/2P alternate draws, map 0 at 88,280, level 015, final mode 20
+PASS: native carry-in/dismount/camera replay edition=0 4:3 full draws
+NSS zone 3: 4:3/1P full draws, map 2 at 88,296, level 03e, final mode 13
+NSS zone 3: 16:9/2P full draws, map 2 at 88,296, level 03e, final mode 13
+PASS: edition 0 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+NSS zone 3: 16:9/2P alternate draws, map 2 at 88,296, level 03e, final mode 13
+PASS: native carry-in/dismount/camera replay edition=0 4:3 alternate draws
+NSS zone 4: 4:3/1P full draws, map 0 at 328,88, level 00f, final mode 20
+NSS zone 4: 16:9/2P full draws, map 0 at 328,88, level 00f, final mode 20
+NSS zone 4: 16:9/2P alternate draws, map 0 at 328,88, level 00f, final mode 20
+NSS zone 5: 4:3/1P full draws, map 3 at 136,376, level 042, final mode 20
+PASS: edition 0 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+NSS zone 5: 16:9/2P full draws, map 3 at 136,376, level 042, final mode 20
+PASS: native carry-in/dismount/camera replay edition=0 16:9 full draws
+NSS zone 5: 16:9/2P alternate draws, map 3 at 136,376, level 042, final mode 20
+NSS zone 6: 4:3/1P full draws, map 0 at 392,360, level 022, final mode 20
+PASS: edition 1 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+NSS zone 6: 16:9/2P full draws, map 0 at 392,360, level 022, final mode 20
+NSS zone 6: 16:9/2P alternate draws, map 0 at 392,360, level 022, final mode 20
+PASS: native carry-in/dismount/camera replay edition=0 16:9 alternate draws
+NSS zone 7: 4:3/1P full draws, map 0 at 232,376, level 018, final mode 20
+NSS zone 7: 16:9/2P full draws, map 0 at 232,376, level 018, final mode 20
+NSS zone 7: 16:9/2P alternate draws, map 0 at 232,376, level 018, final mode 20
+PASS: 21 native NSS title/zone/player/map/gameplay sessions, all seven zones in 4:3/16:9, 1P/2P, deterministic RAM/PCM with alternate draws; 12787 draws / 2556 skips
+PASS: retail save sentinel unchanged by arcade, game-over returns to title, language/edition reinitialization and asset validation
+build/host/test-yoshi-gs data/smw_assets.dat data/smw_super_system.dat data/smw_japanese.dat build/host/v015-fixtures-gs
+PASS: edition 1 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: edition 1 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 4:3 full draws
+PASS: native carry-in/dismount/camera replay edition=1 4:3 alternate draws
+PASS: edition 1 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: native carry-in/dismount/camera replay edition=0 4:3 full draws
+PASS: native carry-in/dismount/camera replay edition=1 16:9 full draws
+PASS: native carry-in/dismount/camera replay edition=0 4:3 alternate draws
+PASS: edition 1 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 16:9 alternate draws
+PASS: edition 1 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: native carry-in/dismount/camera replay edition=2 4:3 full draws
+PASS: native carry-in/dismount/camera replay edition=2 4:3 alternate draws
+PASS: native carry-in/dismount/camera replay edition=0 16:9 full draws
+PASS: native carry-in/dismount/camera replay edition=2 16:9 full draws
+PASS: native carry-in/dismount/camera replay edition=2 16:9 alternate draws
+PASS: 2496 Yoshi projection fixtures, 4992 pieces, 864 hidden pieces, 285924 correctly placed raster pixels; 2592 live pieces across 2172 camera updates; 12 native dismount sessions; EN/JP/NSS, 4:3/16:9, full/alternate drawing
+python3 tests/test_assets.py
+PASS: seven malformed/legacy asset cases rejected; all four complete secondary tables match USA data
+PASS: native carry-in/dismount/camera replay edition=0 16:9 alternate draws
+PASS: edition 1 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: edition 1 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: edition 2 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 4:3 full draws
+PASS: edition 2 4:3 full draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: edition 2 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 4:3 alternate draws
+PASS: edition 2 4:3 alternate draws, 332 hidden P-switch frames, 210 carried frames, 1371 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 16:9 full draws
+PASS: edition 2 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: edition 2 16:9 full draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: native carry-in/dismount/camera replay edition=1 16:9 alternate draws
+PASS: edition 2 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: 96 long main-map pans return exactly to Mario; 120 hidden / 120 unhidden edge pieces; 2520 carried P-switch frames; EN/JP/Super System, 4:3/16:9, full/alternate draws
+PASS: native carry-in/dismount/camera replay edition=2 4:3 full draws
+PASS: edition 2 16:9 alternate draws, 420 hidden P-switch frames, 210 carried frames, 1589 spiny samples
+PASS: 96 long main-map pans return exactly to Mario; 120 hidden / 120 unhidden edge pieces; 2520 carried P-switch frames; EN/JP/Super System, 4:3/16:9, full/alternate draws
+PASS: native carry-in/dismount/camera replay edition=2 4:3 alternate draws
+PASS: native carry-in/dismount/camera replay edition=2 16:9 full draws
+PASS: native carry-in/dismount/camera replay edition=2 16:9 alternate draws
+PASS: 2496 Yoshi projection fixtures, 4992 pieces, 864 hidden pieces, 285924 correctly placed raster pixels; 2592 live pieces across 2172 camera updates; 12 native dismount sessions; EN/JP/NSS, 4:3/16:9, full/alternate drawing

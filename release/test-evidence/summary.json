@@ -1,0 +1,136 @@
+{
+  "version": "v016",
+  "date": "2026-11-02",
+  "release_status": "playable beta; release acceptance pending",
+  "room_scope": "Controlled room-loader/input smoke tests, not campaign completion or PS2 runtime evidence",
+  "room_table_entries": 235,
+  "unique_room_labels": 193,
+  "room_sweep": {
+    "cases": 1410,
+    "passed": 1410,
+    "failed": 0,
+    "sanitizers": [
+      "AddressSanitizer",
+      "UndefinedBehaviorSanitizer"
+    ],
+    "maximum_updates_per_case": 240,
+    "actual_updates": 335962,
+    "by_edition_and_width": {
+      "en-4:3": 235,
+      "en-16:9": 235,
+      "jp-4:3": 235,
+      "jp-16:9": 235,
+      "ss-4:3": 235,
+      "ss-16:9": 235
+    }
+  },
+  "safety_issues_fixed": [
+    "Vertical Cheep Cheep speed-table bounds",
+    "Layer-2 scroll byte-indexed word-table bounds",
+    "Large-canvas forward overlapping copy",
+    "Four complete 19-byte canvas tile variants",
+    "Mario pose 0x46 table bounds"
+  ],
+  "retained_suites": "passed; initial execute-bit launch failure repaired and affected/unstarted suites rerun",
+  "retained_log_sha256": {
+    "v016-retained-tests.log": "4e7a4cc626c1be672f165056ea0e56496aeeb82872ffc635d049949c6c6e87a9",
+    "v016-retained-followup.log": "ee9a3815cd420c885d7b7b66a9c33512b016136235163f5f5f665025cc7d94ed",
+    "v016-game-tests.log": "623839ffdbe38a4d5c84ede55073e21f2a053008bee8019d6905d91b6313b511",
+    "v016-wide-replay-tests.log": "df196c2fc35e4cc0e70c28a291940004c24c28801303b660d8630912dc69cf00",
+    "v016-v006-replay-tests.log": "10bd821028bc1adc8155188924464a55f8b9a3ce339dfce76818ff4a337c1831",
+    "v016-journal-tests.log": "7f780f36dad74d5ed211283f31e40c7dec9ac64574481936e2ccd5bc5d2a9a34",
+    "v016-launcher-tests.log": "d963df01ff2b758a11a060f5d83f1184a96c9fabf3fae3120611e7067d32603b",
+    "v016-platform-tests.log": "a8e479a7a830fb6a670d4b0c91f6e906e575b837fbec9a474eca8f9151130efd",
+    "v016-safety-table-check.log": "b6836ba2355dcb46cd1fecefa50d7029b6d4cdce5fe7be0ae5a1d535fbcc13af",
+    "v016-builder-tests-final.log": "4b2fda942c2bfbffdd9e02e6e9fb81958e645defe7ab51c9454b5a9d16843ff9"
+  },
+  "integration_builds": {
+    "all_inputs": {
+      "version": "v016",
+      "built_utc": "2026-11-02T10:40:17.825879+00:00",
+      "inputs": {
+        "usa": {
+          "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765",
+          "copier_header_removed": false
+        },
+        "japanese": {
+          "sha1": "f977afabf24ed269d86366209a460450bbc37e76",
+          "copier_header_removed": false
+        },
+        "super_system": {
+          "sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+          "copier_header_removed": false
+        }
+      },
+      "source_sha256": "c8a9913c190e8128a6004e859af7620973ea2d585bbc19e97c0956a1cbc82728",
+      "features": [
+        "usa",
+        "japanese",
+        "super_system"
+      ],
+      "files": {
+        "SMWPS2_v016.elf": {
+          "bytes": 1703532,
+          "sha256": "1f4373658a3937d136c908ff64be3b59014f63ebfa2b67637d3d1c3106237920"
+        },
+        "SMWPS2_v016.iso": {
+          "bytes": 18534400,
+          "sha256": "6aa2ed4ce4e81b7143dd8175e231096ad57f15876e11ae711f3fe714e2e2f163"
+        }
+      },
+      "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+      "scope": "Source cross-build and verified ISO packaging; not PS2 runtime validation."
+    },
+    "clean_public_us_only": {
+      "version": "v016",
+      "built_utc": "2026-11-02T10:52:29.282903+00:00",
+      "inputs": {
+        "usa": {
+          "sha1": "6b47bb75d16514b6a476aa0c73a683a2a4c18765",
+          "copier_header_removed": true
+        }
+      },
+      "source_sha256": "b81d7bc5520101035d56bb15f317039f97c36defefcbad4b32a68db85ba4832f",
+      "features": [
+        "usa"
+      ],
+      "files": {
+        "SMWPS2_v016.elf": {
+          "bytes": 1564156,
+          "sha256": "984121b9930156c063b44d097bac30e79fdff76c51940973b814181e36280e8f"
+        },
+        "SMWPS2_v016.iso": {
+          "bytes": 18395136,
+          "sha256": "22c8ceba2d11630e89438dee57be0655ef610c279489b0ec6efc6cccd1f211e6"
+        }
+      },
+      "compiler": "mips64r5900el-ps2-elf-gcc (GCC) 15.2.0",
+      "scope": "Source cross-build and verified ISO packaging; not PS2 runtime validation."
+    }
+  },
+  "builder_checks": [
+    "malformed ROM rejected",
+    "header accepted without modifying input",
+    "fresh source staging excludes DAT/ROM files",
+    "optional frontend symbols absent",
+    "US-only ELF includes US DAT and excludes JP/NSS DATs",
+    "ELF and ISO SHA256 readback",
+    "ISO BOOT.ELF and SYSTEM.CNF byte readback",
+    "Docker argument/mount/context contract using fake client",
+    "corrupt output hash rejected"
+  ],
+  "not_tested": [
+    "Actual Windows/Python dialog/Docker end-to-end run",
+    "Physical PS2 or PCSX2 execution of v016",
+    "Complete campaign, all exits and dynamic routes",
+    "Every boss phase, ending and credits in authentic campaign context",
+    "Uniform physical-PS2 performance across all scenes"
+  ],
+  "input_provenance": "Integration ROM images were assembled from the pinned SMWDisX source and matched the accepted clean-ROM hashes. No independent external dump was tested.",
+  "notes": [
+    "Host timing models do not measure PS2 frame rate.",
+    "Sanitizer cases are controlled room-entry/input checks, not level-completion tests.",
+    "ISO timestamps can change output hashes across builds.",
+    "Only source, notices and test evidence are in the public kit; game assets are extracted from user ROMs."
+  ]
+}

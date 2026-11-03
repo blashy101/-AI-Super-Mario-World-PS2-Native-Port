@@ -1,0 +1,5 @@
+PASS: kSprXXX_FixedMovementCheepCheep_SwimmingXSpeed, $01B01D, 4 original bytes
+PASS: kSpr0EA_Layer2Scroll_DirectionToStartMoving, $05CA5C, 6 original bytes
+PASS: kExtObj71_Canvas1_Tiles, $0DE05E, 76 original bytes
+PASS: kPlayerGFXRt_PlayerXYDispIndexIndex, $00DCEC, 71 original bytes
+PASS: kPlayerGFXRt_DATA_00E18E, $00E18E, 71 original bytes

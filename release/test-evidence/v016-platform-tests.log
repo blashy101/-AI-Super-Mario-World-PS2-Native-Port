@@ -1,0 +1,14 @@
+cc -Iinclude -Ivendor/smw -Ivendor/smw/src -Ivendor/smw/src/snes -O2 -std=gnu11 -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas tests/test_audio_pacer.c src/audio_queue.c src/frame_pacer.c vendor/smw/src/snes/dsp.c -Wl,--gc-sections -o build/host/test-audio-pacer
+build/host/test-audio-pacer
+PASS: stereo 48 kHz rational resampling, fractional samples, queue bounds/order/errors, VBlank wrap and overrun accounting
+python3 tests/test_platform.py
+{"seconds": 180, "format": 32000, "first_fps": 37.662, "last_fps": 14.985, "sim_hz": 59.956, "wait_calls": 10792, "underflows": 0, "short_writes": 0, "max_gap_ms": 83.417, "version": "v003", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": -2000, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 2000, "timer_fallback": false, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": true, "widescreen": false}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": -2000, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 2000, "timer_fallback": false, "widescreen": true}
+{"seconds": 1800, "format": 48000, "first_fps": 29.92, "last_fps": 29.97, "sim_hz": 59.939, "wait_calls": 0, "underflows": 0, "short_writes": 0, "max_gap_ms": 33.367, "version": "v016", "audio_clock_ppm": 0, "timer_fallback": true, "widescreen": true}
+PASS: old-loop collapse reproduced; new-loop 30-minute cadence, audio drift and timer fallback
