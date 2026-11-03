@@ -1,0 +1,67 @@
+{
+  "source": "IsoFrieze/SMWDisX",
+  "assembler": "Asar 1.91",
+  "rom_sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+  "rom_sha256": "08dab87f3058ce434920422f70292442e53732dd92eba1359a43a21e01bffc4f",
+  "symbols": {
+    "StripeImages": 34000,
+    "GFXFilesBank": 47622,
+    "GFXFilesHigh": 47572,
+    "GFXFilesLow": 47522,
+    "Layer3Ptr": 364544,
+    "MessageBoxes": 370137,
+    "ClearMessageStripe": 372957,
+    "DATA_05A5A7": 370087,
+    "DATA_05B2DB": 373433,
+    "ZoneCursorStripe": 39906,
+    "ZoneCursorPositions": 39925,
+    "InitLevelTileMovementData": 40345,
+    "InitLevelTileMovementData_End": 40437,
+    "InitLevelTileMoveIndices": 40437,
+    "InitOWEventPlayerData": 40445,
+    "InitOWEventPlayerData_End": 40732,
+    "InitOWEventPlayerDataIndices": 40732,
+    "CursorCoords": 40237,
+    "FileSelectStripe": 374695
+  },
+  "commit": "30643c7595a7d097d731de69476f8059c7cf98c3",
+  "reference_ranges": [
+    [
+      39703,
+      40816
+    ],
+    [
+      298752,
+      299063
+    ],
+    [
+      372957,
+      373466
+    ],
+    [
+      374695,
+      374856
+    ],
+    [
+      837966,
+      838064
+    ],
+    [
+      839682,
+      839728
+    ],
+    [
+      841200,
+      841216
+    ]
+  ],
+  "reference_functions": {
+    "InitSaveData": 40746,
+    "GM08FileSelect": 39936,
+    "CODE_049037": 298963,
+    "CODE_0CC94E": 837966,
+    "CODE_0CCFDE": 839682,
+    "CODE_0CD5C9": 841200,
+    "CODE_05B10C": 372970
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "source": "SMWDisX SS assembly",
+  "source_rom_sha1": "06a6efc246c6fdb83efab1d402d61d2179a84494",
+  "capsule_sha256": "35abd8125cd25825c8ed0b67fe4c05d0c2db65be9cbbe54cde87f18f6541b887",
+  "ranges": [
+    [
+      39703,
+      40816
+    ],
+    [
+      298752,
+      299063
+    ],
+    [
+      372957,
+      373466
+    ],
+    [
+      374695,
+      374856
+    ],
+    [
+      837966,
+      838064
+    ],
+    [
+      839682,
+      839728
+    ],
+    [
+      841200,
+      841216
+    ]
+  ],
+  "functions": {
+    "InitSaveData": 40746,
+    "GM08FileSelect": 39936,
+    "CODE_049037": 298963,
+    "CODE_0CC94E": 837966,
+    "CODE_0CCFDE": 839682,
+    "CODE_0CD5C9": 841200
+  }
+}

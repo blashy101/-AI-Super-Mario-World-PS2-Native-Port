@@ -1,0 +1,1180 @@
+{
+  "source": "SMWDisX 30643c7595a7d097d731de69476f8059c7cf98c3 bank_05.asm Layer1Ptrs; exclude TestLevel only",
+  "rooms": [
+    {
+      "id": 0,
+      "hex": "000",
+      "label": "BonusGameLevel"
+    },
+    {
+      "id": 1,
+      "hex": "001",
+      "label": "VS2Level001"
+    },
+    {
+      "id": 2,
+      "hex": "002",
+      "label": "VS3Level002"
+    },
+    {
+      "id": 3,
+      "hex": "003",
+      "label": "TSALevel003"
+    },
+    {
+      "id": 4,
+      "hex": "004",
+      "label": "DGHLevel004"
+    },
+    {
+      "id": 5,
+      "hex": "005",
+      "label": "DP3Level005"
+    },
+    {
+      "id": 6,
+      "hex": "006",
+      "label": "DP4Level006"
+    },
+    {
+      "id": 7,
+      "hex": "007",
+      "label": "C2Level007"
+    },
+    {
+      "id": 8,
+      "hex": "008",
+      "label": "GSPLevel008"
+    },
+    {
+      "id": 9,
+      "hex": "009",
+      "label": "DP2Level009"
+    },
+    {
+      "id": 10,
+      "hex": "00A",
+      "label": "DS1Level00A"
+    },
+    {
+      "id": 11,
+      "hex": "00B",
+      "label": "VFLevel00B"
+    },
+    {
+      "id": 12,
+      "hex": "00C",
+      "label": "BB1Level00C"
+    },
+    {
+      "id": 13,
+      "hex": "00D",
+      "label": "BB2Level00D"
+    },
+    {
+      "id": 14,
+      "hex": "00E",
+      "label": "C4Level00E"
+    },
+    {
+      "id": 15,
+      "hex": "00F",
+      "label": "CBALevel00F"
+    },
+    {
+      "id": 16,
+      "hex": "010",
+      "label": "CMLevel010"
+    },
+    {
+      "id": 17,
+      "hex": "011",
+      "label": "SLLevel011"
+    },
+    {
+      "id": 19,
+      "hex": "013",
+      "label": "DSHLevel013"
+    },
+    {
+      "id": 20,
+      "hex": "014",
+      "label": "YSPLevel014"
+    },
+    {
+      "id": 21,
+      "hex": "015",
+      "label": "DP1Level015"
+    },
+    {
+      "id": 22,
+      "hex": "016",
+      "label": "DP1Level015"
+    },
+    {
+      "id": 23,
+      "hex": "017",
+      "label": "DP1Level015"
+    },
+    {
+      "id": 24,
+      "hex": "018",
+      "label": "SGSLevel018"
+    },
+    {
+      "id": 26,
+      "hex": "01A",
+      "label": "C6Level01A"
+    },
+    {
+      "id": 27,
+      "hex": "01B",
+      "label": "CFLevel01B"
+    },
+    {
+      "id": 28,
+      "hex": "01C",
+      "label": "CI5Level01C"
+    },
+    {
+      "id": 29,
+      "hex": "01D",
+      "label": "CI4Level01D"
+    },
+    {
+      "id": 31,
+      "hex": "01F",
+      "label": "FFLevel01F"
+    },
+    {
+      "id": 32,
+      "hex": "020",
+      "label": "C5Level020"
+    },
+    {
+      "id": 33,
+      "hex": "021",
+      "label": "CGHLevel021"
+    },
+    {
+      "id": 34,
+      "hex": "022",
+      "label": "CI1Level022"
+    },
+    {
+      "id": 35,
+      "hex": "023",
+      "label": "CI3Level023"
+    },
+    {
+      "id": 36,
+      "hex": "024",
+      "label": "CI2Level024"
+    },
+    {
+      "id": 147,
+      "hex": "093",
+      "label": "LemmyCopyLevel"
+    },
+    {
+      "id": 148,
+      "hex": "094",
+      "label": "WendyCopyLevel"
+    },
+    {
+      "id": 149,
+      "hex": "095",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 150,
+      "hex": "096",
+      "label": "LarryIggyCopyLevel"
+    },
+    {
+      "id": 151,
+      "hex": "097",
+      "label": "LarryIggyCopyLevel"
+    },
+    {
+      "id": 152,
+      "hex": "098",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 153,
+      "hex": "099",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 154,
+      "hex": "09A",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 155,
+      "hex": "09B",
+      "label": "BowserCopyLevel"
+    },
+    {
+      "id": 189,
+      "hex": "0BD",
+      "label": "CI5Sub1Level0BD"
+    },
+    {
+      "id": 190,
+      "hex": "0BE",
+      "label": "CI1Sub2Level0BE"
+    },
+    {
+      "id": 191,
+      "hex": "0BF",
+      "label": "CBASub1Level0BF"
+    },
+    {
+      "id": 192,
+      "hex": "0C0",
+      "label": "CI5Sub2Level0C0"
+    },
+    {
+      "id": 193,
+      "hex": "0C1",
+      "label": "CMSub1Level0C1"
+    },
+    {
+      "id": 194,
+      "hex": "0C2",
+      "label": "DS1Sub1Level0C2"
+    },
+    {
+      "id": 195,
+      "hex": "0C3",
+      "label": "DP4Sub1Level0C3"
+    },
+    {
+      "id": 196,
+      "hex": "0C4",
+      "label": "DGHSub4Level0C4"
+    },
+    {
+      "id": 197,
+      "hex": "0C5",
+      "label": "IntroLevel0C5"
+    },
+    {
+      "id": 198,
+      "hex": "0C6",
+      "label": "SLSub1Level0C6"
+    },
+    {
+      "id": 199,
+      "hex": "0C7",
+      "label": "TitleScrLevel0C7"
+    },
+    {
+      "id": 200,
+      "hex": "0C8",
+      "label": "YoshiWingsLevel0C8"
+    },
+    {
+      "id": 201,
+      "hex": "0C9",
+      "label": "GSPSub1Level0C9"
+    },
+    {
+      "id": 202,
+      "hex": "0CA",
+      "label": "YSPSub1Level0CA"
+    },
+    {
+      "id": 203,
+      "hex": "0CB",
+      "label": "VS3Sub1Level0CB"
+    },
+    {
+      "id": 204,
+      "hex": "0CC",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 205,
+      "hex": "0CD",
+      "label": "CI2Sub8Level0CD"
+    },
+    {
+      "id": 206,
+      "hex": "0CE",
+      "label": "CI2Sub4Level0CE"
+    },
+    {
+      "id": 207,
+      "hex": "0CF",
+      "label": "CI2Sub3Level0CF"
+    },
+    {
+      "id": 208,
+      "hex": "0D0",
+      "label": "CI1Level022"
+    },
+    {
+      "id": 209,
+      "hex": "0D1",
+      "label": "CI1Level022"
+    },
+    {
+      "id": 210,
+      "hex": "0D2",
+      "label": "DP4Sub1Level0D2"
+    },
+    {
+      "id": 211,
+      "hex": "0D3",
+      "label": "C6Sub2Level0D3"
+    },
+    {
+      "id": 212,
+      "hex": "0D4",
+      "label": "C6Sub1Level0D4"
+    },
+    {
+      "id": 213,
+      "hex": "0D5",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 214,
+      "hex": "0D6",
+      "label": "FFSub1Level0D6"
+    },
+    {
+      "id": 215,
+      "hex": "0D7",
+      "label": "CI3Sub1Level0D7"
+    },
+    {
+      "id": 216,
+      "hex": "0D8",
+      "label": "VS2Sub1Level0D8"
+    },
+    {
+      "id": 217,
+      "hex": "0D9",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 218,
+      "hex": "0DA",
+      "label": "C4Sub1Level0DA"
+    },
+    {
+      "id": 219,
+      "hex": "0DB",
+      "label": "C4Sub3Level0DB"
+    },
+    {
+      "id": 220,
+      "hex": "0DC",
+      "label": "C4Sub2Level0DC"
+    },
+    {
+      "id": 221,
+      "hex": "0DD",
+      "label": "BB2Sub1Level0DD"
+    },
+    {
+      "id": 222,
+      "hex": "0DE",
+      "label": "DGHSub1Level0F9"
+    },
+    {
+      "id": 223,
+      "hex": "0DF",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 224,
+      "hex": "0E0",
+      "label": "VFSub1Level0E0"
+    },
+    {
+      "id": 225,
+      "hex": "0E1",
+      "label": "VFSub1Level0E0"
+    },
+    {
+      "id": 226,
+      "hex": "0E2",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 227,
+      "hex": "0E3",
+      "label": "DP1Sub2Level0E3"
+    },
+    {
+      "id": 228,
+      "hex": "0E4",
+      "label": "DSHSub4Level0E4"
+    },
+    {
+      "id": 229,
+      "hex": "0E5",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 230,
+      "hex": "0E6",
+      "label": "C2Sub1Level0E6"
+    },
+    {
+      "id": 231,
+      "hex": "0E7",
+      "label": "C2Sub3Level0E7"
+    },
+    {
+      "id": 232,
+      "hex": "0E8",
+      "label": "C2Sub2Level0E8"
+    },
+    {
+      "id": 233,
+      "hex": "0E9",
+      "label": "DP2Sub1Level0E9"
+    },
+    {
+      "id": 234,
+      "hex": "0EA",
+      "label": "CI4Sub1Level0EA"
+    },
+    {
+      "id": 235,
+      "hex": "0EB",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 236,
+      "hex": "0EC",
+      "label": "DSHLevel013"
+    },
+    {
+      "id": 237,
+      "hex": "0ED",
+      "label": "DSHSub1Level0ED"
+    },
+    {
+      "id": 238,
+      "hex": "0EE",
+      "label": "DSHLevel013"
+    },
+    {
+      "id": 239,
+      "hex": "0EF",
+      "label": "CFSub1Level0EF"
+    },
+    {
+      "id": 240,
+      "hex": "0F0",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 241,
+      "hex": "0F1",
+      "label": "DSHSub2Level0F1"
+    },
+    {
+      "id": 242,
+      "hex": "0F2",
+      "label": "DSHSub1Level0ED"
+    },
+    {
+      "id": 243,
+      "hex": "0F3",
+      "label": "BB1Sub1Level0F3"
+    },
+    {
+      "id": 244,
+      "hex": "0F4",
+      "label": "DP3Sub1Level0F4"
+    },
+    {
+      "id": 245,
+      "hex": "0F5",
+      "label": "CI1Sub1Level0F5"
+    },
+    {
+      "id": 246,
+      "hex": "0F6",
+      "label": "CI1Sub1Level0F5"
+    },
+    {
+      "id": 247,
+      "hex": "0F7",
+      "label": "SGSSub2Level0F7"
+    },
+    {
+      "id": 248,
+      "hex": "0F8",
+      "label": "SGSSub1Level0F8"
+    },
+    {
+      "id": 249,
+      "hex": "0F9",
+      "label": "DGHSub1Level0F9"
+    },
+    {
+      "id": 250,
+      "hex": "0FA",
+      "label": "DGHSub3Level0FA"
+    },
+    {
+      "id": 251,
+      "hex": "0FB",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 252,
+      "hex": "0FC",
+      "label": "CGHSub1Level0FC"
+    },
+    {
+      "id": 253,
+      "hex": "0FD",
+      "label": "DP1Sub1Level0FD"
+    },
+    {
+      "id": 254,
+      "hex": "0FE",
+      "label": "DGHSub2Level0FE"
+    },
+    {
+      "id": 255,
+      "hex": "0FF",
+      "label": "DP2Sub2Level0FF"
+    },
+    {
+      "id": 256,
+      "hex": "100",
+      "label": "BonusGameLevel"
+    },
+    {
+      "id": 257,
+      "hex": "101",
+      "label": "C1Level101"
+    },
+    {
+      "id": 258,
+      "hex": "102",
+      "label": "YI4Level102"
+    },
+    {
+      "id": 259,
+      "hex": "103",
+      "label": "YI3Level103"
+    },
+    {
+      "id": 260,
+      "hex": "104",
+      "label": "YHLevel104"
+    },
+    {
+      "id": 261,
+      "hex": "105",
+      "label": "YI1Level105"
+    },
+    {
+      "id": 262,
+      "hex": "106",
+      "label": "YI2Level106"
+    },
+    {
+      "id": 263,
+      "hex": "107",
+      "label": "VGHLevel107"
+    },
+    {
+      "id": 264,
+      "hex": "108",
+      "label": "SlopeTestLevel108"
+    },
+    {
+      "id": 265,
+      "hex": "109",
+      "label": "VS1Level109"
+    },
+    {
+      "id": 266,
+      "hex": "10A",
+      "label": "VD3Level10A"
+    },
+    {
+      "id": 267,
+      "hex": "10B",
+      "label": "DS2Level10B"
+    },
+    {
+      "id": 269,
+      "hex": "10D",
+      "label": "FDLevel10D"
+    },
+    {
+      "id": 270,
+      "hex": "10E",
+      "label": "BDLevel10E"
+    },
+    {
+      "id": 271,
+      "hex": "10F",
+      "label": "VoB4Level10F"
+    },
+    {
+      "id": 272,
+      "hex": "110",
+      "label": "C7Level110"
+    },
+    {
+      "id": 273,
+      "hex": "111",
+      "label": "VoBFLevel111"
+    },
+    {
+      "id": 275,
+      "hex": "113",
+      "label": "VoB3Level113"
+    },
+    {
+      "id": 276,
+      "hex": "114",
+      "label": "VoBGHLevel114"
+    },
+    {
+      "id": 277,
+      "hex": "115",
+      "label": "VoB2Level115"
+    },
+    {
+      "id": 278,
+      "hex": "116",
+      "label": "VoB1Level116"
+    },
+    {
+      "id": 279,
+      "hex": "117",
+      "label": "CSLevel117"
+    },
+    {
+      "id": 280,
+      "hex": "118",
+      "label": "VD2Level118"
+    },
+    {
+      "id": 281,
+      "hex": "119",
+      "label": "VD4Level119"
+    },
+    {
+      "id": 282,
+      "hex": "11A",
+      "label": "VD1Level11A"
+    },
+    {
+      "id": 283,
+      "hex": "11B",
+      "label": "RSPLevel11B"
+    },
+    {
+      "id": 284,
+      "hex": "11C",
+      "label": "C3Level11C"
+    },
+    {
+      "id": 285,
+      "hex": "11D",
+      "label": "FGHLevel11D"
+    },
+    {
+      "id": 286,
+      "hex": "11E",
+      "label": "FoI1Level11E"
+    },
+    {
+      "id": 287,
+      "hex": "11F",
+      "label": "FoI4Level11F"
+    },
+    {
+      "id": 288,
+      "hex": "120",
+      "label": "FoI2Level120"
+    },
+    {
+      "id": 289,
+      "hex": "121",
+      "label": "BSPLevel121"
+    },
+    {
+      "id": 290,
+      "hex": "122",
+      "label": "FSALevel122"
+    },
+    {
+      "id": 291,
+      "hex": "123",
+      "label": "FoI3Level123"
+    },
+    {
+      "id": 293,
+      "hex": "125",
+      "label": "FunkyLevel125"
+    },
+    {
+      "id": 294,
+      "hex": "126",
+      "label": "OutrageousLevel126"
+    },
+    {
+      "id": 295,
+      "hex": "127",
+      "label": "MondoLevel127"
+    },
+    {
+      "id": 296,
+      "hex": "128",
+      "label": "GroovyLevel128"
+    },
+    {
+      "id": 298,
+      "hex": "12A",
+      "label": "GnarlyLevel12A"
+    },
+    {
+      "id": 299,
+      "hex": "12B",
+      "label": "TubularLevel12B"
+    },
+    {
+      "id": 300,
+      "hex": "12C",
+      "label": "WayCoolLevel12C"
+    },
+    {
+      "id": 301,
+      "hex": "12D",
+      "label": "AwesomeLevel12D"
+    },
+    {
+      "id": 304,
+      "hex": "130",
+      "label": "SW2Level130"
+    },
+    {
+      "id": 306,
+      "hex": "132",
+      "label": "SW3Level132"
+    },
+    {
+      "id": 308,
+      "hex": "134",
+      "label": "SW1Level134"
+    },
+    {
+      "id": 309,
+      "hex": "135",
+      "label": "SW4Level135"
+    },
+    {
+      "id": 310,
+      "hex": "136",
+      "label": "SW5Level136"
+    },
+    {
+      "id": 403,
+      "hex": "193",
+      "label": "WendyCopyLevel"
+    },
+    {
+      "id": 404,
+      "hex": "194",
+      "label": "LemmyCopyLevel"
+    },
+    {
+      "id": 405,
+      "hex": "195",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 406,
+      "hex": "196",
+      "label": "LarryIggyCopyLevel"
+    },
+    {
+      "id": 407,
+      "hex": "197",
+      "label": "LarryIggyCopyLevel"
+    },
+    {
+      "id": 408,
+      "hex": "198",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 409,
+      "hex": "199",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 410,
+      "hex": "19A",
+      "label": "Mode7BossCopyLevel"
+    },
+    {
+      "id": 411,
+      "hex": "19B",
+      "label": "BowserCopyLevel"
+    },
+    {
+      "id": 443,
+      "hex": "1BB",
+      "label": "VoB3Sub1Level1BB"
+    },
+    {
+      "id": 444,
+      "hex": "1BC",
+      "label": "FoI3Sub1Level1BC"
+    },
+    {
+      "id": 445,
+      "hex": "1BD",
+      "label": "FDSub10Level1BD"
+    },
+    {
+      "id": 446,
+      "hex": "1BE",
+      "label": "YI4Sub1Level1BE"
+    },
+    {
+      "id": 447,
+      "hex": "1BF",
+      "label": "VoB4Sub1Level1BF"
+    },
+    {
+      "id": 448,
+      "hex": "1C0",
+      "label": "CSSub1Level1C0"
+    },
+    {
+      "id": 449,
+      "hex": "1C1",
+      "label": "FoI4Sub1Level1C1"
+    },
+    {
+      "id": 450,
+      "hex": "1C2",
+      "label": "VD3Sub2Level1C2"
+    },
+    {
+      "id": 451,
+      "hex": "1C3",
+      "label": "VD2Sub1Level1C3"
+    },
+    {
+      "id": 452,
+      "hex": "1C4",
+      "label": "GnarlySub1Level1C4"
+    },
+    {
+      "id": 453,
+      "hex": "1C5",
+      "label": "GnarlySub1Level1C4"
+    },
+    {
+      "id": 454,
+      "hex": "1C6",
+      "label": "DS2Sub1Level1C6"
+    },
+    {
+      "id": 455,
+      "hex": "1C7",
+      "label": "BowserLevel1C7"
+    },
+    {
+      "id": 456,
+      "hex": "1C8",
+      "label": "YoshiWingsLevel1C8"
+    },
+    {
+      "id": 457,
+      "hex": "1C9",
+      "label": "WayCoolSub1Level1C9"
+    },
+    {
+      "id": 458,
+      "hex": "1CA",
+      "label": "YI2Sub1Level1CA"
+    },
+    {
+      "id": 459,
+      "hex": "1CB",
+      "label": "YI1Sub1Level1CB"
+    },
+    {
+      "id": 460,
+      "hex": "1CC",
+      "label": "FDSub8Level1CC"
+    },
+    {
+      "id": 461,
+      "hex": "1CD",
+      "label": "FDSub7Level1CD"
+    },
+    {
+      "id": 462,
+      "hex": "1CE",
+      "label": "FDSub6Level1CE"
+    },
+    {
+      "id": 463,
+      "hex": "1CF",
+      "label": "FDSub5Level1CF"
+    },
+    {
+      "id": 464,
+      "hex": "1D0",
+      "label": "FDSub9Level1D0"
+    },
+    {
+      "id": 465,
+      "hex": "1D1",
+      "label": "FDSub4Level1D1"
+    },
+    {
+      "id": 466,
+      "hex": "1D2",
+      "label": "FDSub3Level1D2"
+    },
+    {
+      "id": 467,
+      "hex": "1D3",
+      "label": "FDSub2Level1D3"
+    },
+    {
+      "id": 468,
+      "hex": "1D4",
+      "label": "FDSub1Level1D4"
+    },
+    {
+      "id": 469,
+      "hex": "1D5",
+      "label": "SW2Sub1Level1D5"
+    },
+    {
+      "id": 470,
+      "hex": "1D6",
+      "label": "SW1Sub1Level1D6"
+    },
+    {
+      "id": 471,
+      "hex": "1D7",
+      "label": "BSPSub1Level1D7"
+    },
+    {
+      "id": 472,
+      "hex": "1D8",
+      "label": "RSPSub1Level1D8"
+    },
+    {
+      "id": 473,
+      "hex": "1D9",
+      "label": "VoBGHLevel114"
+    },
+    {
+      "id": 474,
+      "hex": "1DA",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 475,
+      "hex": "1DB",
+      "label": "VoBGHSub2Level1DB"
+    },
+    {
+      "id": 476,
+      "hex": "1DC",
+      "label": "VoBGHSub2Level1DB"
+    },
+    {
+      "id": 477,
+      "hex": "1DD",
+      "label": "VoBGHSub1Level1DD"
+    },
+    {
+      "id": 478,
+      "hex": "1DE",
+      "label": "Mode7BossLayer1"
+    },
+    {
+      "id": 479,
+      "hex": "1DF",
+      "label": "FoI4Sub2Level1DF"
+    },
+    {
+      "id": 480,
+      "hex": "1E0",
+      "label": "MondoSub1Level1E0"
+    },
+    {
+      "id": 481,
+      "hex": "1E1",
+      "label": "MondoSub2Level1E1"
+    },
+    {
+      "id": 482,
+      "hex": "1E2",
+      "label": "VoB2Sub2Level1E2"
+    },
+    {
+      "id": 483,
+      "hex": "1E3",
+      "label": "VoB2Sub1Level1E3"
+    },
+    {
+      "id": 484,
+      "hex": "1E4",
+      "label": "VoB1Sub1Level1E4"
+    },
+    {
+      "id": 485,
+      "hex": "1E5",
+      "label": "VoB1Sub2Level1E5"
+    },
+    {
+      "id": 486,
+      "hex": "1E6",
+      "label": "FGHSub2Level1E6"
+    },
+    {
+      "id": 487,
+      "hex": "1E7",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 488,
+      "hex": "1E8",
+      "label": "FGHLevel11D"
+    },
+    {
+      "id": 489,
+      "hex": "1E9",
+      "label": "FGHLevel11D"
+    },
+    {
+      "id": 490,
+      "hex": "1EA",
+      "label": "VGHSub1Level1EA"
+    },
+    {
+      "id": 491,
+      "hex": "1EB",
+      "label": "LarryIggyLevel"
+    },
+    {
+      "id": 492,
+      "hex": "1EC",
+      "label": "CSSub3Level1EC"
+    },
+    {
+      "id": 493,
+      "hex": "1ED",
+      "label": "CSSub2Level1ED"
+    },
+    {
+      "id": 494,
+      "hex": "1EE",
+      "label": "CSSub4Level1EE"
+    },
+    {
+      "id": 495,
+      "hex": "1EF",
+      "label": "VD1Sub1Level1EF"
+    },
+    {
+      "id": 496,
+      "hex": "1F0",
+      "label": "VS1Sub2Level1F0"
+    },
+    {
+      "id": 497,
+      "hex": "1F1",
+      "label": "VS1Sub1Level1F1"
+    },
+    {
+      "id": 498,
+      "hex": "1F2",
+      "label": "C3Sub3Level1F2"
+    },
+    {
+      "id": 499,
+      "hex": "1F3",
+      "label": "C3Sub2Level1F3"
+    },
+    {
+      "id": 500,
+      "hex": "1F4",
+      "label": "C3Sub1Level1F4"
+    },
+    {
+      "id": 501,
+      "hex": "1F5",
+      "label": "VD4Sub1Level1F5"
+    },
+    {
+      "id": 502,
+      "hex": "1F6",
+      "label": "LarryIggyLevel"
+    },
+    {
+      "id": 503,
+      "hex": "1F7",
+      "label": "VD3Sub1Level1F7"
+    },
+    {
+      "id": 504,
+      "hex": "1F8",
+      "label": "FoI3Sub2Level1F8"
+    },
+    {
+      "id": 505,
+      "hex": "1F9",
+      "label": "GhostHouseExitLevel"
+    },
+    {
+      "id": 506,
+      "hex": "1FA",
+      "label": "FGHSub1Level1FA"
+    },
+    {
+      "id": 507,
+      "hex": "1FB",
+      "label": "VGHLevel107"
+    },
+    {
+      "id": 508,
+      "hex": "1FC",
+      "label": "C1Sub1Level1FC"
+    },
+    {
+      "id": 509,
+      "hex": "1FD",
+      "label": "YI3Sub1Level1FD"
+    },
+    {
+      "id": 510,
+      "hex": "1FE",
+      "label": "C7Sub1Level1FE"
+    },
+    {
+      "id": 511,
+      "hex": "1FF",
+      "label": "YI4Sub2Level1FF"
+    }
+  ]
+}
