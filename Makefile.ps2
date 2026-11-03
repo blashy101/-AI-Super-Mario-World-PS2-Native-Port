@@ -1,0 +1,69 @@
+ifndef PS2SDK
+$(error Set PS2DEV, PS2SDK, GSKIT and PATH as described in README.md)
+endif
+GSKIT ?= $(PS2DEV)/gsKit
+VENDOR := vendor/smw
+ENGINE := $(filter-out $(VENDOR)/src/tracing.c $(VENDOR)/src/util.c,$(wildcard $(VENDOR)/src/*.c))
+CORE := $(ENGINE) $(wildcard $(VENDOR)/src/snes/*.c) src/runtime.c src/runtime_helpers.c src/asset_index.c src/bus.c src/save_journal.c src/frame_pacer.c src/audio_queue.c src/widescreen.c src/localization.c src/super_system.c src/save_icon.c src/menu.c src/ps2_main.c
+EE_BIN := build/ee/SMWPS2.elf
+IRX := audsrv iomanX usbd bdm bdmfs_fatfs usbmass_bd sio2man padman secrman mcman mcserv
+ASSET_FILE ?= data/smw_assets.dat
+JAPANESE_ASSET_FILE ?= data/smw_japanese.dat
+SUPER_SYSTEM_ASSET_FILE ?= data/smw_super_system.dat
+EMBED_ASSETS ?= 1
+ASSET_CFLAGS ?=
+EE_OBJS := $(patsubst %.c,build/ee/%.o,$(CORE)) $(addprefix build/ee/irx/,$(addsuffix .o,$(IRX)))
+ifeq ($(EMBED_ASSETS),1)
+EE_OBJS += build/ee/embedded_assets.o
+ifneq ($(wildcard $(JAPANESE_ASSET_FILE)),)
+EE_OBJS += build/ee/embedded_japanese.o
+endif
+ifneq ($(wildcard $(SUPER_SYSTEM_ASSET_FILE)),)
+EE_OBJS += build/ee/embedded_super_system.o
+endif
+EE_CFLAGS += -DSMW_EMBEDDED_ASSETS
+endif
+EE_INCS := -Iinclude -I$(VENDOR) -I$(VENDOR)/src -I$(GSKIT)/include
+EE_CFLAGS += -std=gnu11 -DSMW_PS2_PIXEL_FORMAT -fno-strict-aliasing -fwrapv -ffunction-sections -fdata-sections -Wno-unknown-pragmas -Wno-unused-variable -Wno-unused-but-set-variable
+EE_LDFLAGS := -L$(GSKIT)/lib -Wl,--gc-sections -Wl,-Map,build/ee/SMWPS2.map
+EE_LIBS := -lgskit -ldmakit -laudsrv -lpad -lmc -lpatches -lm
+EE_DBGINFOFLAGS :=
+.PHONY: all clean
+all: dist/SMWPS2.elf
+dist/SMWPS2.elf: $(EE_BIN)
+	@mkdir -p $(dir $@)
+	$(EE_STRIP) --strip-debug -o $@ $<
+build/ee/%.o: %.c
+	@mkdir -p $(dir $@)
+	$(EE_CC) $(EE_CFLAGS) $(EE_INCS) -MMD -MP -c $< -o $@
+build/ee/irx/%.c: $(PS2SDK)/iop/irx/%.irx
+	@mkdir -p $(dir $@)
+	$(PS2SDK)/bin/bin2c $< $@ $*_irx
+AUDSRV_SOURCES := $(wildcard vendor/audsrv/src/* vendor/audsrv/include/*) vendor/audsrv/Makefile
+build/iop/audsrv.irx: $(AUDSRV_SOURCES)
+	$(MAKE) -C vendor/audsrv IOP_BIN=$(abspath $@) IOP_OBJS_DIR=$(abspath build/iop/obj)/
+build/ee/irx/audsrv.c: build/iop/audsrv.irx
+	@mkdir -p $(dir $@)
+	$(PS2SDK)/bin/bin2c $< $@ audsrv_irx
+build/ee/irx/%.o: build/ee/irx/%.c
+	$(EE_CC) $(EE_CFLAGS) $(EE_INCS) -c $< -o $@
+build/ee/embedded_assets.c: $(ASSET_FILE)
+	@mkdir -p $(dir $@)
+	$(PS2SDK)/bin/bin2c $< $@ smw_embedded_assets
+build/ee/embedded_assets.o: build/ee/embedded_assets.c
+	$(EE_CC) $(EE_CFLAGS) $(ASSET_CFLAGS) $(EE_INCS) -c $< -o $@
+build/ee/embedded_japanese.c: $(JAPANESE_ASSET_FILE)
+	@mkdir -p $(dir $@)
+	$(PS2SDK)/bin/bin2c $< $@ smw_embedded_japanese
+build/ee/embedded_japanese.o: build/ee/embedded_japanese.c
+	$(EE_CC) $(EE_CFLAGS) $(ASSET_CFLAGS) $(EE_INCS) -c $< -o $@
+build/ee/embedded_super_system.c: $(SUPER_SYSTEM_ASSET_FILE)
+	@mkdir -p $(dir $@)
+	$(PS2SDK)/bin/bin2c $< $@ smw_embedded_super_system
+build/ee/embedded_super_system.o: build/ee/embedded_super_system.c
+	$(EE_CC) $(EE_CFLAGS) $(ASSET_CFLAGS) $(EE_INCS) -c $< -o $@
+clean:
+	rm -rf build/ee build/iop dist
+include $(PS2SDK)/samples/Makefile.pref
+include $(PS2SDK)/samples/Makefile.eeglobal
+-include $(EE_OBJS:.o=.d)
